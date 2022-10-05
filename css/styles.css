@@ -1,0 +1,392 @@
+/* колір верхнього поля,логотипу footer,тексту header, головний   #FFFFFF
+колір поля header і footer #2F303A
+колір осовного поля #F5F5F5 - це для figma
+колір другої секції #F5F4FA 
+
+колір тексту activ #2196F3
+колір логотипу header #000000
+колір заголовків та спистків #212121
+колір силків та тексту #757575
+колір силок footer rgba(255, 255, 255, 0.6)
+*/
+:root {
+  --up-white: #ffffff;
+  --background-header-footer: #2f303a;
+  --line-header: #ececec;
+  --line-card: #eeeeee;
+  --second-background: #f5f4fa;
+  --activ: #2196f3;
+  --logo-text: #000000;
+  --color-title: #212121;
+  --color-text: #757575;
+  --contact-footer: #ffffff99;
+  --activ-button: #188ce8;
+  --card-set-gap: 30px;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--up-white);
+  color: var(--color-title);
+  font-size: 14px;
+  letter-spacing: 0.03em;
+}
+/* прибирання крапки та лінії на тексті */
+.list {
+  list-style: none;
+}
+.link {
+  padding-left: 0;
+  text-decoration: none;
+}
+/* скидання стилыв та встановлення меж макету */
+.container {
+  width: 1200px;
+  /* outline: 1px solid green; */
+  margin: 0 auto;
+  padding: 0 15px;
+}
+h1,
+h2,
+h3,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  /* overflow: hidden; */
+}
+button {
+  display: block;
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+}
+.section {
+  padding: 94px 0px;
+}
+/* сховати заголовок */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+/* шапка */
+.box {
+  /* background-color: var(--up-white); */
+  border-bottom: 1px solid var(--line-header);
+}
+.box .container {
+  display: flex;
+  align-items: center;
+}
+.box .nav {
+  display: flex;
+  align-items: center;
+}
+.box .list {
+  display: flex;
+  margin-left: auto;
+}
+.box .items + .items {
+  margin-left: 50px;
+}
+.logo {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+
+  color: var(--activ);
+}
+.box .logo {
+  margin-right: 93px;
+}
+.web {
+  color: var(--logo-text);
+}
+.item {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+
+  color: var(--color-title);
+}
+.item.activ {
+  color: var(--activ);
+}
+.box .contact {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+
+  color: var(--color-text);
+}
+.box .item:hover,
+.box .item:focus,
+.contact:hover,
+.contact:focus {
+  color: var(--activ);
+}
+/* головна */
+.hero {
+  background-color: var(--background-header-footer);
+
+  text-align: center;
+  padding-top: 200px;
+  padding-bottom: 200px;
+}
+.hero-title {
+  margin: 0 auto;
+  margin-bottom: 30px;
+  width: 696px;
+
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  letter-spacing: 0.06em;
+
+  color: var(--up-white);
+
+  text-transform: uppercase;
+}
+.hero-button {
+  margin: 0 auto;
+
+  padding: 10px 32px;
+  min-width: 216px;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  text-align: center;
+  letter-spacing: 0.06em;
+
+  color: var(--up-white);
+  background-color: var(--activ);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+.hero-button:hover,
+.hero-button:focus {
+  background-color: var(--activ-button);
+}
+/* Наші переваги */
+.pluses .list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.pluses-item {
+  width: 270px;
+  margin-right: var(--card-set-gap);
+}
+.pluses-item:nth-child(4n) {
+  margin-right: 0;
+}
+.pluses-title {
+  margin-bottom: 10px;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+
+  text-transform: uppercase;
+}
+.pluses-text {
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+
+  color: var(--color-text);
+}
+/* Чим ми займаємось */
+.work.section {
+  padding-top: 0px;
+}
+.work-title {
+  margin-bottom: 50px;
+
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.16;
+  letter-spacing: 0.03em;
+
+  text-align: center;
+}
+.work-items {
+  display: flex;
+  gap: var(--card-set-gap);
+}
+/* Наша команда */
+.team {
+  background-color: var(--second-background);
+}
+.team-title {
+  margin-bottom: 50px;
+
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+
+  text-align: center;
+}
+.team-list {
+  display: flex;
+}
+.team-bloc {
+  display: block;
+  margin-right: var(--card-set-gap);
+  width: 270px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+
+  text-align: center;
+
+  background-color: var(--up-white);
+}
+.team-bloc:last-of-type {
+  margin-right: 0;
+}
+.team-items {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.team-name {
+  margin-bottom: 10px;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+}
+.team-text {
+  font-size: 16px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+
+  color: var(--color-text);
+}
+/* сторінка проектів */
+/* меню проектів-кнопки */
+.list.project {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+.project-button {
+  padding: 6px 22px;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+  letter-spacing: 0.03em;
+  text-align: center;
+
+  color: var(--color-title);
+  background-color: var(--second-background);
+}
+.project-button:hover,
+.project-button:focus {
+  color: var(--up-white);
+  background-color: var(--activ);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
+/* проекти */
+.project-bloc {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: calc(-1 * var(--card-set-gap));
+  margin-top: calc(-1 * var(--card-set-gap));
+}
+.card {
+  margin-right: var(--card-set-gap);
+  margin-top: var(--card-set-gap);
+
+  width: 370px;
+  /* background-color: var(--up-white); */
+}
+.card-text-bloc {
+  padding: 20px 24px;
+  border: 1px solid var(--line-card);
+}
+.card-title {
+  margin-bottom: 9px;
+
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+}
+.card-text {
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.03em;
+
+  color: var(--color-text);
+}
+/* Підвал */
+.footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: var(--background-header-footer);
+}
+.footer-address {
+  margin-top: 20px;
+}
+.footer .logo {
+  color: var(--up-white);
+}
+.footer .web {
+  color: var(--activ);
+}
+.footer-item {
+  margin-bottom: 9px;
+}
+.footer .list :last-child {
+  margin-bottom: 0;
+}
+.address {
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+
+  color: var(--up-white);
+}
+.footer .contact {
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+
+  color: var(--contact-footer);
+}
+.address:hover,
+.address:focus,
+.footer .contact:hover,
+.footer .contact:focus {
+  color: var(--activ);
+}
