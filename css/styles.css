@@ -11,7 +11,8 @@
 */
 :root {
   --up-white: #ffffff;
-  --background-header-footer: #2f303a;
+  --background-header: #c4c4c4;
+  --background-footer: #2f303a;
   --line-header: #ececec;
   --line-card: #eeeeee;
   --second-background: #f5f4fa;
@@ -30,7 +31,7 @@ body {
   font-size: 14px;
   letter-spacing: 0.03em;
 }
-/* прибирання крапки та лінії на тексті */
+/*------------- прибирання крапки та лінії на тексті -----*/
 .list {
   list-style: none;
 }
@@ -38,7 +39,7 @@ body {
   padding-left: 0;
   text-decoration: none;
 }
-/* скидання стилыв та встановлення меж макету */
+/* ----скидання стилів та встановлення меж макету--------- */
 .container {
   width: 1200px;
   /* outline: 1px solid green; */
@@ -69,7 +70,7 @@ button {
 .section {
   padding: 94px 0px;
 }
-/* сховати заголовок */
+/* ------------------------сховати заголовок */
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -84,7 +85,7 @@ button {
   overflow: hidden;
 }
 
-/* шапка */
+/*------------ шапка---------------------- */
 .box {
   /* background-color: var(--up-white); */
   border-bottom: 1px solid var(--line-header);
@@ -148,9 +149,11 @@ button {
 .contact:focus {
   color: var(--activ);
 }
-/* головна */
+/*--------------------- головна--------------------- */
 .hero {
-  background-color: var(--background-header-footer);
+  background-image: linear-gradient(to right, #2f303a66, #2f303a66), url('../images/team.jpg');
+  background-color: var(--background-header);
+  max-width: 1600px;
 
   text-align: center;
   padding-top: 200px;
@@ -190,7 +193,7 @@ button {
 .hero-button:focus {
   background-color: var(--activ-button);
 }
-/* Наші переваги */
+/* ----------------------Наші переваги ---------------------*/
 .pluses .list {
   display: flex;
   flex-wrap: wrap;
@@ -219,7 +222,7 @@ button {
 
   color: var(--color-text);
 }
-/* Чим ми займаємось */
+/*--------------------------- Чим ми займаємось -----------------*/
 .work.section {
   padding-top: 0px;
 }
@@ -237,7 +240,7 @@ button {
   display: flex;
   gap: var(--card-set-gap);
 }
-/* Наша команда */
+/* -----------------------Наша команда ---------------------------*/
 .team {
   background-color: var(--second-background);
 }
@@ -287,8 +290,8 @@ button {
 
   color: var(--color-text);
 }
-/* сторінка проектів */
-/* меню проектів-кнопки */
+/* ----------------------сторінка проектів---------------- */
+/*---------------------- меню проектів-кнопки------------------- */
 .list.project {
   display: flex;
   gap: 8px;
@@ -314,7 +317,7 @@ button {
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
-/* проекти */
+/* ------------------------------проекти -------------------------*/
 .project-bloc {
   display: flex;
   flex-wrap: wrap;
@@ -326,7 +329,9 @@ button {
   margin-top: var(--card-set-gap);
 
   width: 370px;
-  /* background-color: var(--up-white); */
+}
+.card:hover {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 .card-text-bloc {
   padding: 20px 24px;
@@ -347,11 +352,11 @@ button {
 
   color: var(--color-text);
 }
-/* Підвал */
+/* ----------------------------Підвал -----------------------------*/
 .footer {
   padding-top: 60px;
   padding-bottom: 60px;
-  background-color: var(--background-header-footer);
+  background-color: var(--background-footer);
 }
 .footer-address {
   margin-top: 20px;
