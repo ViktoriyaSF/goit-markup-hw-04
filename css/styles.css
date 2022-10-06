@@ -70,7 +70,7 @@ button {
 .section {
   padding: 94px 0px;
 }
-/* ------------------------сховати заголовок */
+/* ------------------------сховати заголовок -------*/
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -101,6 +101,7 @@ button {
 .box .list {
   display: flex;
   margin-left: auto;
+  align-items: baseline;
 }
 .box .items + .items {
   margin-left: 50px;
@@ -148,6 +149,16 @@ button {
 .contact:hover,
 .contact:focus {
   color: var(--activ);
+}
+.icon-contact {
+  justify-content: center;
+  margin-right: 10px;
+  align-self: center;
+  fill: currentColor;
+}
+.phone {
+  /* align-items: baseline; */
+  margin-bottom: -2.25px;
 }
 /*--------------------- головна--------------------- */
 .hero {
@@ -222,6 +233,18 @@ button {
 
   color: var(--color-text);
 }
+.bloc-icon-pluses {
+  margin-bottom: var(--card-set-gap);
+  height: 120px;
+  background-color: var(--second-background);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.icon-pluses {
+  width: 70px;
+  height: 70px;
+}
 /*--------------------------- Чим ми займаємось -----------------*/
 .work.section {
   padding-top: 0px;
@@ -289,6 +312,17 @@ button {
   letter-spacing: 0.03em;
 
   color: var(--color-text);
+}
+/* <!------------------- Постійні клієнти ----------------------> */
+.client-title {
+  margin-bottom: 50px;
+
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+
+  text-align: center;
 }
 /* ----------------------сторінка проектів---------------- */
 /*---------------------- меню проектів-кнопки------------------- */
