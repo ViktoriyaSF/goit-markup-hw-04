@@ -311,7 +311,7 @@ button {
 }
 .team-items {
   padding-top: 30px;
-  padding-bottom: 30px;
+  padding-bottom: 16px;
 }
 .team-name {
   margin-bottom: 10px;
@@ -328,7 +328,36 @@ button {
 
   color: var(--color-text);
 }
-/* <!------------------- Постійні клієнти ----------------------> */
+/* --------------соціальна сітка--------------------------- */
+.sosial {
+  display: flex;
+  gap: 10px;
+
+  justify-content: center;
+  margin-bottom: 30px;
+}
+.sosial-button {
+  width: 44px;
+  height: 44px;
+  background-color: var(--up-white);
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sosial-icon {
+  fill: var(--color-vector);
+  width: 20px;
+  height: 20px;
+}
+.sosial-button:hover {
+  background-color: var(--activ);
+}
+.sosial-button:hover svg {
+  fill: var(--up-white);
+}
+/* <!-------------- Постійні клієнти ----------------------> */
 .client-title {
   margin-bottom: 50px;
 
@@ -343,26 +372,31 @@ button {
   display: flex;
   gap: var(--card-set-gap);
 }
-.client-icon {
+.client-site {
   width: 170px;
   height: 92px;
-  padding: 16px 32px;
 
-  fill: var(--color-vector);
-
-  border: 1px solid var(--color-vector);
+  background-color: var(--up-white);
   border-radius: 4px;
+  border: 1px solid var(--color-vector);
   cursor: pointer;
-}
-.client-icon:hover,
-.client-icon:focus {
-  fill: var(--activ);
-  outline: 1px solid var(--activ);
-}
-.client-logo {
+
   display: flex;
   align-items: center;
-  height: 100%;
+  justify-content: center;
+}
+.client-icon {
+  fill: var(--color-vector);
+  width: 106px;
+  height: 60px;
+}
+.client-site:hover svg,
+.client-site:focus svg {
+  fill: var(--activ);
+}
+.client-site:hover,
+.client-site:focus {
+  outline: 1px solid var(--activ);
 }
 /* ----------------------сторінка проектів---------------- */
 /*------------------- меню проектів-кнопки----------------- */
