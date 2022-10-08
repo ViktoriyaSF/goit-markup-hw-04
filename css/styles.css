@@ -71,6 +71,9 @@ button {
 .section {
   padding: 94px 0px;
 }
+*:focus {
+  outline: none;
+}
 /* ------------------------сховати заголовок -------*/
 .visually-hidden {
   position: absolute;
@@ -115,6 +118,10 @@ button {
   letter-spacing: 0.03em;
 
   color: var(--activ);
+}
+.nav .logo:hover,
+.nav .logo:focus {
+  border-bottom: 1px groove var(--activ);
 }
 .box .logo {
   margin-right: 93px;
@@ -164,9 +171,15 @@ button {
 
 /*--------------------- головна--------------------- */
 .hero {
-  background-image: linear-gradient(to right, #2f303a66, #2f303a66), url('../images/team.jpg');
-  background-color: var(--background-header);
   max-width: 1600px;
+  min-height: 600px;
+  margin-left: auto;
+  margin-right: auto;
+
+  background-color: var(--background-header);
+  background-image: linear-gradient(to right, #2f303a66, #2f303a66), url('../images/team.jpg');
+  background-position: center;
+  background-size: cover;
 
   text-align: center;
   padding-top: 200px;
@@ -338,18 +351,21 @@ button {
   fill: var(--color-vector);
 
   border: 1px solid var(--color-vector);
-  background-color: var(--up-white);
   border-radius: 4px;
   cursor: pointer;
 }
 .client-icon:hover,
 .client-icon:focus {
   fill: var(--activ);
-  border-color: var(--activ);
+  outline: 1px solid var(--activ);
 }
-
+.client-logo {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
 /* ----------------------сторінка проектів---------------- */
-/*---------------------- меню проектів-кнопки------------------- */
+/*------------------- меню проектів-кнопки----------------- */
 .list.project {
   display: flex;
   gap: 8px;
@@ -424,6 +440,10 @@ button {
 }
 .footer .web {
   color: var(--activ);
+}
+.footer .logo:hover,
+.footer .logo:focus {
+  border-bottom: 1px groove var(--up-white);
 }
 .footer-item {
   margin-bottom: 9px;
