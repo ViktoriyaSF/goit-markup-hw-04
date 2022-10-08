@@ -351,10 +351,12 @@ button {
   width: 20px;
   height: 20px;
 }
-.sosial-button:hover {
+.sosial-button:hover,
+.sosial-button:focus {
   background-color: var(--activ);
 }
-.sosial-button:hover svg {
+.sosial-button:hover svg,
+.sosial-button:focus svg {
   fill: var(--up-white);
 }
 /* <!-------------- Постійні клієнти ----------------------> */
@@ -462,9 +464,16 @@ button {
 }
 /* ----------------------------Підвал -----------------------------*/
 .footer {
+  background-color: var(--background-footer);
+}
+.footer-container {
+  display: flex;
+  gap: 70px;
+  justify-content: flex-start;
+}
+.footer-main {
   padding-top: 60px;
   padding-bottom: 60px;
-  background-color: var(--background-footer);
 }
 .footer-address {
   margin-top: 20px;
@@ -506,4 +515,41 @@ button {
 .footer .contact:hover,
 .footer .contact:focus {
   color: var(--activ);
+}
+/* ----------------Приєнуйся соц зв'язок в підвалі --------- */
+.footer-sosial {
+  padding-top: 72px;
+  padding-bottom: 100px;
+}
+.footer-sosial-title {
+  margin-bottom: 20px;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  color: var(--up-white);
+}
+.footer-sosial-list {
+  display: flex;
+  gap: 10px;
+}
+.footer-sosial-button {
+  width: 44px;
+  height: 44px;
+
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer-sosial-icon {
+  width: 20px;
+  height: 20px;
+  fill: var(--up-white);
+}
+.footer-sosial-button:hover,
+.footer-sosial-button:focus {
+  background-color: var(--activ);
 }
