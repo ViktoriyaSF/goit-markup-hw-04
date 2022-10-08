@@ -326,31 +326,26 @@ button {
 
   text-align: center;
 }
-.client-button {
-  width: 170px;
-  height: 92px;
-  border: 1px solid var(--color-vector);
-  background-color: var(--up-white);
-}
-/* .client-link {
-  color: var(--color-vector);
-} */
-.client-icon {
-  fill: var(--color-vector);
-  align-items: center;
-}
-.client-icon:hover {
-  fill: var(--activ);
-}
-.client-button:hover {
-  border-color: var(--activ);
-}
-
 .client-bloc {
   display: flex;
   gap: var(--card-set-gap);
-  justify-content: center;
-  align-items: center;
+}
+.client-icon {
+  width: 170px;
+  height: 92px;
+  padding: 16px 32px;
+
+  fill: var(--color-vector);
+
+  border: 1px solid var(--color-vector);
+  background-color: var(--up-white);
+  border-radius: 4px;
+  cursor: pointer;
+}
+.client-icon:hover,
+.client-icon:focus {
+  fill: var(--activ);
+  border-color: var(--activ);
 }
 
 /* ----------------------сторінка проектів---------------- */
