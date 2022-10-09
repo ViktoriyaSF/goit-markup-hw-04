@@ -71,9 +71,7 @@ button {
 .section {
   padding: 94px 0px;
 }
-*:focus {
-  outline: none;
-}
+
 /* ------------------------сховати заголовок -------*/
 .visually-hidden {
   position: absolute;
@@ -119,8 +117,7 @@ button {
 
   color: var(--activ);
 }
-.nav .logo:hover,
-.nav .logo:focus {
+.nav .logo:hover {
   border-bottom: 1px groove var(--activ);
 }
 .box .logo {
@@ -145,6 +142,8 @@ button {
   color: var(--activ);
 }
 .box .contact {
+  display: flex;
+
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -172,12 +171,13 @@ button {
 /*--------------------- головна--------------------- */
 .hero {
   max-width: 1600px;
-  min-height: 600px;
+  height: 600px;
   margin-left: auto;
   margin-right: auto;
 
   background-color: var(--background-header);
   background-image: linear-gradient(to right, #2f303a66, #2f303a66), url('../images/team.jpg');
+  background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 
@@ -260,7 +260,7 @@ button {
   width: 70px;
   height: 70px;
 }
-/*--------------------------- Чим ми займаємось -----------------*/
+/*--------------------------- Чим ми займаємось -------------*/
 .work.section {
   padding-top: 0px;
 }
@@ -278,7 +278,7 @@ button {
   display: flex;
   gap: var(--card-set-gap);
 }
-/* -----------------------Наша команда ---------------------------*/
+/* ---------------------Наша команда -----------------------*/
 .team {
   background-color: var(--second-background);
 }
@@ -311,7 +311,7 @@ button {
 }
 .team-items {
   padding-top: 30px;
-  padding-bottom: 16px;
+  padding-bottom: 30px;
 }
 .team-name {
   margin-bottom: 10px;
@@ -322,6 +322,8 @@ button {
   letter-spacing: 0.03em;
 }
 .team-text {
+  margin-bottom: 16px;
+
   font-size: 16px;
   line-height: 1.19;
   letter-spacing: 0.03em;
@@ -334,12 +336,12 @@ button {
   gap: 10px;
 
   justify-content: center;
-  margin-bottom: 30px;
 }
 .sosial-button {
   width: 44px;
   height: 44px;
   background-color: var(--up-white);
+  color: var(--color-vector);
   border-radius: 50%;
 
   display: flex;
@@ -347,17 +349,15 @@ button {
   justify-content: center;
 }
 .sosial-icon {
-  fill: var(--color-vector);
+  fill: currentColor;
   width: 20px;
   height: 20px;
 }
 .sosial-button:hover,
 .sosial-button:focus {
   background-color: var(--activ);
-}
-.sosial-button:hover svg,
-.sosial-button:focus svg {
-  fill: var(--up-white);
+  color: var(--up-white);
+  outline: none;
 }
 /* <!-------------- Постійні клієнти ----------------------> */
 .client-title {
@@ -382,23 +382,22 @@ button {
   border-radius: 4px;
   border: 1px solid var(--color-vector);
   cursor: pointer;
+  color: var(--color-vector);
 
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .client-icon {
-  fill: var(--color-vector);
+  fill: currentColor;
   width: 106px;
   height: 60px;
 }
-.client-site:hover svg,
-.client-site:focus svg {
-  fill: var(--activ);
-}
 .client-site:hover,
 .client-site:focus {
-  outline: 1px solid var(--activ);
+  border-color: var(--activ);
+  color: var(--activ);
+  outline: none;
 }
 /* ----------------------сторінка проектів---------------- */
 /*------------------- меню проектів-кнопки----------------- */
@@ -440,7 +439,8 @@ button {
 
   width: 370px;
 }
-.card:hover {
+.card:hover,
+.card:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 .card-text-bloc {
@@ -454,6 +454,8 @@ button {
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
+
+  color: var(--color-title);
 }
 .card-text {
   font-size: 16px;
@@ -465,15 +467,14 @@ button {
 /* ----------------------------Підвал -----------------------------*/
 .footer {
   background-color: var(--background-footer);
+  padding: 60px 0;
 }
 .footer-container {
   display: flex;
-  gap: 70px;
-  justify-content: flex-start;
+  align-items: center;
 }
 .footer-main {
-  padding-top: 60px;
-  padding-bottom: 60px;
+  padding-right: 70px;
 }
 .footer-address {
   margin-top: 20px;
@@ -484,8 +485,7 @@ button {
 .footer .web {
   color: var(--activ);
 }
-.footer .logo:hover,
-.footer .logo:focus {
+.footer .logo:hover {
   border-bottom: 1px groove var(--up-white);
 }
 .footer-item {
@@ -517,10 +517,6 @@ button {
   color: var(--activ);
 }
 /* ----------------Приєнуйся соц зв'язок в підвалі --------- */
-.footer-sosial {
-  padding-top: 72px;
-  padding-bottom: 100px;
-}
 .footer-sosial-title {
   margin-bottom: 20px;
   font-size: 14px;
@@ -552,4 +548,5 @@ button {
 .footer-sosial-button:hover,
 .footer-sosial-button:focus {
   background-color: var(--activ);
+  outline: none;
 }
