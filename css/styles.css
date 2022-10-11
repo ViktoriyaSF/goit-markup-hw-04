@@ -474,7 +474,7 @@ button {
 }
 .footer-container {
   display: flex;
-  align-items: center;
+  align-items: baseline;
 }
 .footer-main {
   padding-right: 70px;
